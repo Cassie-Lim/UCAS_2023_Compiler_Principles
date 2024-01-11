@@ -1,6 +1,6 @@
 # HW9
 
-> 知识点（本次无新知识点，大部分recap前面）：
+> 知识点（本次作业大部分recap前面）：
 >
 > - 设计SSD（Syntax-Directed Def.，语法制导定义，产生式+语义规则）
 > - SDT（Syntax-Directed Translation Scheme，语法制导翻译方案，产生式+语义动作）
