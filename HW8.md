@@ -4,8 +4,8 @@
 >
 > - 消除左递归
 >   $$
->   E \rightarrow Ea \\ \Rightarrow \\
->   E \rightarrow E'a, E' \rightarrow aE'| \epsilon
+>   E \rightarrow Ea | b\\ \Rightarrow \\
+>   E \rightarrow bE', E' \rightarrow aE'| \epsilon
 >   $$
 >
 > - 语法制导定义
