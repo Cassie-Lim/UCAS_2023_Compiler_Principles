@@ -104,13 +104,15 @@
 
 ​		故该文法为LL(1)
 
-4. | 非终结符  | （                         | ）              | number                     | identifier                 | $    |
-   | --------- | -------------------------- | --------------- | -------------------------- | -------------------------- | ---- |
-   | lexp      | lexp → list                |                 | lexp → atom                | lexp → atom                |      |
-   | atom      |                            |                 | atom→number                | atom→identifier            |      |
-   | list      | list→(lexp-seq)            | list→(lexp-seq) |                            |                            |      |
-   | lexp-seq  | lexp-seq → lexp lexp-seq'  |                 | lexp-seq → lexp lexp-seq'  | lexp-seq → lexp lexp-seq'  |      |
-   | lexp-seq' | lexp-seq' → lexp lexp-seq' | lexp-seq'→ ε    | lexp-seq' → lexp lexp-seq' | lexp-seq' → lexp lexp-seq' |      |
+4. | 非终结符  | （                         | ）           | number                     | identifier                 | $    |
+   | --------- | -------------------------- | ------------ | -------------------------- | -------------------------- | ---- |
+   | lexp      | lexp → list                |              | lexp → atom                | lexp → atom                |      |
+   | atom      |                            |              | atom→number                | atom→identifier            |      |
+   | list      | list→(lexp-seq)            |              |                            |                            |      |
+   | lexp-seq  | lexp-seq → lexp lexp-seq'  |              | lexp-seq → lexp lexp-seq'  | lexp-seq → lexp lexp-seq'  |      |
+   | lexp-seq' | lexp-seq' → lexp lexp-seq' | lexp-seq'→ ε | lexp-seq' → lexp lexp-seq' | lexp-seq' → lexp lexp-seq' |      |
+   
+   
 
 >  构造预测分析表：对于文法G中全体`A->α`, 
 >
