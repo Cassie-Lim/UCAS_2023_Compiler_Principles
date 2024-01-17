@@ -69,29 +69,7 @@
    FOLLOW(lexp-seq')=FOLLOW(lexp-seq)={)}
    ```
 	
-	> 求Follow和FIRST思路分析：自底向上，先求FIRST再求FOLLOW
-	>
-	> - 求FIRST：
-	>
-	>   - A->B|C则有`FIRST(A)=FIRST(B)∪FIRST(C)`
-	>   - A->BC：
-	>     - 若ε∈FIRST(B)，FIRST(A)=(FIRST(B)-ε)+FIRST(C)
-	>     - 若ε∉FIRST(B)，FIRST(A)=FIRST(B)
-	>
-	> - 求FOLLOW：A->BC则有
-	>
-	>   - FOLLOW(A)=FOLLOW(C)
-	>
-	>     > Note：此处不考虑A还产生其他产生式的情况，即若有A->BC|D，还应有FOLLOW(A)=FOLLOW(C)∪FOLLOW(D)
-	>
-	>   - FOLLOW(B)=
-	>
-	>     - 若ε∈FIRST(C)，FOLLOW(B)=(FIRST(C)-ε)+FOLLOW(C)
-	>     - 若ε∉FIRST(C)，FOLLOW(B)=FIRST(C)
-	>
-	>   - 若有A是起始符，将$加入FOLLOW(A)（相应地也要update FOLLOW(C)，这是唯一一个自顶向下的步骤）
-	>
-	>     > 个人习惯最后统一执行这一步，因为其他步骤都是自底向上的
+	
 
 
 3. 逐个检查产生式选择不唯一的非终结符：
